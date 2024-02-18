@@ -1,0 +1,75 @@
+site_name: TC-DEV-WIKI
+site_description: >-
+  时链Wiki
+
+repo_name: TC-Wiki
+
+copyright: Copyright &copy; 2021-present <a href="http://www.time-chains.cn" target="_blank" rel="noopener noreferrer">TimeChain</a>
+theme:
+    #名称
+    name: material
+    #语言
+    language: zh
+    #设置浏览器图标
+    favicon: images/favicon.ico
+    #设置徽标
+    logo: images/TC-LOGO.png
+    #搜索属性设置
+    include_search_page: false
+    search_index_only: true
+    #亮暗主题配色切换
+    palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: light blue
+      accent: deep purple
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: deep purple
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+    #设置字体
+    font:
+        text: Roboto Slab
+        code: Roboto Mono
+    #设置覆盖文件
+    custom_dir: overrides
+
+    markdown_extensions:
+    - attr_list
+    - md_in_html
+    - footnotes
+    #插件设置，使用i18n
+    plugins:
+      - i18n:
+          languages:
+            - locale: zh
+              default: true
+              name: 简体中文
+              build: true
+            - locale: en
+              name: English
+              build: true
+              site_name: TimeChain.wiki
+              nav_translations:
+                欢迎加入时链科技:  welcome join the timechain
+    
+      - search:
+          lang:
+            - zh
+            - en
+
+      - git-revision-date-localized
+      - minify:
+        minify_html: true
+
+#导航设置
+nav:
+  - 欢迎加入时链科技: "index.md"
+  - 快速熟悉工具: "快速熟悉工具.md"
+  - VScode简介: "VScode简介.md"
